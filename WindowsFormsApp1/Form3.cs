@@ -12,9 +12,36 @@ namespace WindowsFormsApp1
 {
     public partial class Form3 : Form
     {
+
+        
+        
+            
+
         public Form3()
         {
             InitializeComponent();
+            
+        }
+
+        private void newTS_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void fontsizeTS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameLabel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            usernameLabel.Text = "Username: " + Form1.username;
+
         }
     }
 }

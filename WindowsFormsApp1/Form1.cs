@@ -15,8 +15,8 @@ namespace WindowsFormsApp1
     {
 
         public static Boolean correctDeet = false;
-        public string username;
-        public string password;
+        public static string username;
+        public static string password;
 
 
         public void login() {
@@ -43,7 +43,8 @@ namespace WindowsFormsApp1
                 username = userField.Text;
                 password = passField.Text;
 
-                
+               
+
 
 
             }
