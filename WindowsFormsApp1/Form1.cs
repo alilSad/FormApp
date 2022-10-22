@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
 
         public static Boolean correctDeet = false;
         public static string username;
-        public static string password;
+        public static string userType;
 
 
         public void login() {
@@ -29,21 +29,25 @@ namespace WindowsFormsApp1
 
                 if (splits[0] == userField.Text && splits[1] == passField.Text) {
                     correctDeet = true;
-                    
+                    userType = splits[2];
+
                 }
              
             }
 
             if (correctDeet)
             {
+                username = userField.Text;
+                
+
+
                 Form form3 = new Form3();
+                
                 form3.Show();
                 this.Hide();
 
-                username = userField.Text;
-                password = passField.Text;
-
-               
+                
+                
 
 
 
@@ -64,7 +68,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            correctDeet = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
