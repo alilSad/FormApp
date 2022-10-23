@@ -1,4 +1,4 @@
-﻿
+﻿using System.Collections.Generic;
 namespace WindowsFormsApp1
 {
     partial class Form3
@@ -112,6 +112,7 @@ namespace WindowsFormsApp1
             this.saveTS.Name = "saveTS";
             this.saveTS.Size = new System.Drawing.Size(180, 22);
             this.saveTS.Text = "Save";
+            this.saveTS.Click += new System.EventHandler(this.saveTS_Click);
             // 
             // saveAsTS
             // 
@@ -119,6 +120,7 @@ namespace WindowsFormsApp1
             this.saveAsTS.Name = "saveAsTS";
             this.saveAsTS.Size = new System.Drawing.Size(180, 22);
             this.saveAsTS.Text = "Save As";
+            this.saveAsTS.Click += new System.EventHandler(this.saveAsTS_Click);
             // 
             // logOutTS
             // 
@@ -137,27 +139,31 @@ namespace WindowsFormsApp1
             this.editToolStrip.Name = "editToolStrip";
             this.editToolStrip.Size = new System.Drawing.Size(39, 20);
             this.editToolStrip.Text = "Edit";
+            this.editToolStrip.Click += new System.EventHandler(this.editToolStrip_Click);
             // 
             // cutTS
             // 
             this.cutTS.Image = ((System.Drawing.Image)(resources.GetObject("cutTS.Image")));
             this.cutTS.Name = "cutTS";
-            this.cutTS.Size = new System.Drawing.Size(102, 22);
+            this.cutTS.Size = new System.Drawing.Size(180, 22);
             this.cutTS.Text = "Cut";
+            this.cutTS.Click += new System.EventHandler(this.cutTS_Click);
             // 
             // copyTS
             // 
             this.copyTS.Image = ((System.Drawing.Image)(resources.GetObject("copyTS.Image")));
             this.copyTS.Name = "copyTS";
-            this.copyTS.Size = new System.Drawing.Size(102, 22);
+            this.copyTS.Size = new System.Drawing.Size(180, 22);
             this.copyTS.Text = "Copy";
+            this.copyTS.Click += new System.EventHandler(this.copyTS_Click);
             // 
             // pasteTS
             // 
             this.pasteTS.Image = ((System.Drawing.Image)(resources.GetObject("pasteTS.Image")));
             this.pasteTS.Name = "pasteTS";
-            this.pasteTS.Size = new System.Drawing.Size(102, 22);
+            this.pasteTS.Size = new System.Drawing.Size(180, 22);
             this.pasteTS.Text = "Paste";
+            this.pasteTS.Click += new System.EventHandler(this.pasteTS_Click);
             // 
             // helpToolStrip
             // 
@@ -169,10 +175,10 @@ namespace WindowsFormsApp1
             // 
             // aboutTS
             // 
-            this.aboutTS.Image = ((System.Drawing.Image)(resources.GetObject("aboutTS.Image")));
             this.aboutTS.Name = "aboutTS";
-            this.aboutTS.Size = new System.Drawing.Size(107, 22);
+            this.aboutTS.Size = new System.Drawing.Size(180, 22);
             this.aboutTS.Text = "About";
+            this.aboutTS.Click += new System.EventHandler(this.aboutTS_Click);
             // 
             // toolStrip1
             // 
@@ -220,6 +226,7 @@ namespace WindowsFormsApp1
             this.saveTS2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveTS2.Name = "saveTS2";
             this.saveTS2.Size = new System.Drawing.Size(23, 22);
+            this.saveTS2.Click += new System.EventHandler(this.saveTS2_Click);
             // 
             // saveAsTS2
             // 
@@ -228,6 +235,7 @@ namespace WindowsFormsApp1
             this.saveAsTS2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveAsTS2.Name = "saveAsTS2";
             this.saveAsTS2.Size = new System.Drawing.Size(23, 22);
+            this.saveAsTS2.Click += new System.EventHandler(this.saveAsTS2_Click);
             // 
             // toolStripSeparator1
             // 
@@ -241,6 +249,7 @@ namespace WindowsFormsApp1
             this.boldTS.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.boldTS.Name = "boldTS";
             this.boldTS.Size = new System.Drawing.Size(23, 22);
+            this.boldTS.Click += new System.EventHandler(this.boldTS_Click);
             // 
             // italicTS
             // 
@@ -249,6 +258,7 @@ namespace WindowsFormsApp1
             this.italicTS.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.italicTS.Name = "italicTS";
             this.italicTS.Size = new System.Drawing.Size(23, 22);
+            this.italicTS.Click += new System.EventHandler(this.italicTS_Click);
             // 
             // underlineTS
             // 
@@ -257,11 +267,21 @@ namespace WindowsFormsApp1
             this.underlineTS.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.underlineTS.Name = "underlineTS";
             this.underlineTS.Size = new System.Drawing.Size(23, 22);
+            this.underlineTS.Click += new System.EventHandler(this.underlineTS_Click);
             // 
             // fontsizeTS
             // 
             this.fontsizeTS.Name = "fontsizeTS";
             this.fontsizeTS.Size = new System.Drawing.Size(121, 25);
+            this.fontsizeTS.Items.AddRange(new object[] {
+                "8",
+                "10",
+                "12",
+                "14",
+                "16",
+                "18",
+                "20"
+                });
             this.fontsizeTS.Click += new System.EventHandler(this.fontsizeTS_Click);
             // 
             // aboutTS2
@@ -304,9 +324,10 @@ namespace WindowsFormsApp1
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 20);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.ToolTipText = "cutTS2";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // copyTS2
             // 
@@ -314,8 +335,9 @@ namespace WindowsFormsApp1
             this.copyTS2.Image = ((System.Drawing.Image)(resources.GetObject("copyTS2.Image")));
             this.copyTS2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyTS2.Name = "copyTS2";
-            this.copyTS2.Size = new System.Drawing.Size(21, 20);
+            this.copyTS2.Size = new System.Drawing.Size(29, 20);
             this.copyTS2.Text = "toolStripButton2";
+            this.copyTS2.Click += new System.EventHandler(this.copyTS2_Click);
             // 
             // pasteTS2
             // 
@@ -323,18 +345,23 @@ namespace WindowsFormsApp1
             this.pasteTS2.Image = ((System.Drawing.Image)(resources.GetObject("pasteTS2.Image")));
             this.pasteTS2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteTS2.Name = "pasteTS2";
-            this.pasteTS2.Size = new System.Drawing.Size(21, 20);
+            this.pasteTS2.Size = new System.Drawing.Size(29, 20);
             this.pasteTS2.Text = "toolStripButton3";
+            this.pasteTS2.Click += new System.EventHandler(this.pasteTS2_Click);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(28, 53);
+            this.richTextBox1.Location = new System.Drawing.Point(27, 53);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(951, 577);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
+            //
+      
+
+            //
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
